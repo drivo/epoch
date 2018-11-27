@@ -1,0 +1,15 @@
+{application, aecuckooprebuilt,
+ [{description, "OTP application containing prebuilt Cuckoo Cycle proof of work executables"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
