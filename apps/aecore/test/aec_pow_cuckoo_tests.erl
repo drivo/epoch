@@ -154,5 +154,19 @@ kill_ospid_miner_test_() ->
      ]
     }.
 
+prebuilt_miner_test_() ->
+    {foreach,
+     fun() ->
+             ok = meck:new(aeu_env, [passthrough]),
+             ok = application:ensure_started(erlexec)
+     end,
+     fun(_) ->
+             ok = meck:unload(aeu_env)
+     end,
+     [{"User can configure to mine using a prebuilt miner",
+       fun() -> todo end},
+      {"Err if absent prebuilt miner",
+       fun() -> todo end}
+     ]}.
 
 -endif.
